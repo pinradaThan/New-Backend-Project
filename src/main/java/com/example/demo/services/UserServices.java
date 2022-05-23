@@ -16,6 +16,10 @@ public class UserServices {
     @Autowired
     private UserRepository repo;
 
+    public UserServices(UserRepository repo) {
+        this.repo = repo;
+    }
+
     // requesting all user's info
     public List<User> getUsers() {
         List<User> list = new ArrayList<>();
